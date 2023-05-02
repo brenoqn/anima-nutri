@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  height: 80px;
+  background: #66347f;
+  padding: 1rem 3rem;
+  justify-content: space-between;
+
+  &__info {
+    display: grid;
+    justify-items: center;
+
+    h3 {
+      color: #9e4784;
+      margin: 0;
+    }
+
+    p {
+      color: white;
+    }
+  }
+}
