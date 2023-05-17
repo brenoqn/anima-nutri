@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -6,8 +7,15 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports:[
-    ButtonModule
-  ]
+  imports: [ButtonModule],
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {}
+
+  goToAboutUs() {
+    this.router.navigate(['about-us']);
+  }
+}
