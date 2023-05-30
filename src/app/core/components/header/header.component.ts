@@ -10,12 +10,15 @@ import { ButtonModule } from 'primeng/button';
   imports: [ButtonModule],
 })
 export class HeaderComponent {
-
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
   goToAboutUs() {
     this.router.navigate(['about-us']);
+  }
+
+  goToLogin() {
+    this.router.navigate(['login']);
   }
 }

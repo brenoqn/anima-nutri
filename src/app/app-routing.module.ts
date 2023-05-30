@@ -10,9 +10,12 @@ const routes: Routes = [
   {
     path: 'about-us',
     loadChildren: () =>
-      import('./module/about-us/about-us.module').then(
-        (m) => m.AboutUsModule
-      ),
+      import('./module/about-us/about-us.module').then((m) => m.AboutUsModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./module/login/login.module').then((m) => m.LoginModule),
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
