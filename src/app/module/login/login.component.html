@@ -1,7 +1,59 @@
 <div class="main">
   <app-header></app-header>
-  <div class="main__home">
-    <div class="main__home--card"></div>
+  <div class="main__login">
+    <div class="main__login--card">
+      <div class="main__login--card__title">
+        <h1>Login</h1>
+      </div>
+
+      <div class="main__login--card__inputs">
+        <div class="main__login--card__inputs--email">
+          <label>Email:</label>
+          <mat-form-field>
+            <mat-label>Digite seu e-mail</mat-label>
+            <input
+              matInput
+              placeholder="email@example.com"
+              [formControl]="email"
+              required
+            />
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="main__login--card__inputs--password">
+          <label>Senha:</label>
+          <mat-form-field>
+            <mat-label>Digite sua senha</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+
+        <div class="main__login--card__inputs--forgotten">
+          <p>Esqueci minha senha</p>
+        </div>
+
+        <div class="main__login--card__inputs--buttons">
+          <button mat-raised-button class="login-button">Login</button>
+          <button
+            mat-raised-button
+            class="register-button"
+            (click)="navigateToRegister()"
+          >
+            Cadastre-se
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
   <app-footer></app-footer>
 </div>

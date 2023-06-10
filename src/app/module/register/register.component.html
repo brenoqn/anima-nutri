@@ -1,3 +1,76 @@
-<p>
-  register works!
-</p>
+<div class="main">
+  <app-header></app-header>
+  <div class="main__register">
+    <div class="main__register--card">
+      <div class="main__register--card__title">
+        <h1>Cadastre-se</h1>
+      </div>
+
+      <div class="main__register--card__inputs">
+        <div class="main__register--card__inputs--name">
+          <label>Nome:</label>
+          <mat-form-field>
+            <mat-label>Nome completo</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </div>
+
+        <div class="main__register--card__inputs--cell">
+          <label>Celular:</label>
+          <mat-form-field>
+            <mat-label>(99) 99999-9999</mat-label>
+            <input matInput mask="(00) 00000-0000">
+          </mat-form-field>
+        </div>
+
+        <div class="main__register--card__inputs--email">
+          <label>Email:</label>
+          <mat-form-field>
+            <mat-label>Digite seu e-mail</mat-label>
+            <input
+              matInput
+              placeholder="email@example.com"
+              [formControl]="email"
+              required
+            />
+            <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+          </mat-form-field>
+        </div>
+
+
+        <div class="main__register--card__inputs--gender">
+          <mat-form-field>
+            <mat-label>Sexo:</mat-label>
+            <mat-select>
+              <mat-option value="masc">Masculino</mat-option>
+              <mat-option value="fem">Feminino</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="main__register--card__inputs--password">
+          <label>Senha:</label>
+          <mat-form-field>
+            <mat-label>Digite sua senha</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+
+        <div class="main__register--card__inputs--buttons">
+          <button mat-raised-button class="register-button">Cadastre-se</button>
+          <button mat-raised-button class=" login-button">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
