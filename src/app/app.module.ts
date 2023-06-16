@@ -6,17 +6,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
-import { HomeModule } from './module/home/home.module';
+import { SidenavComponent } from './core/components/sidenav/sidenav.component';
 import { AboutUsModule } from './module/about-us/about-us.module';
-import { NutritionComponent } from './module/nutrition/nutrition.component';
+import { HomeModule } from './module/home/home.module';
+import { NutritionModule } from './module/nutrition/nutrition.module';
+
 @NgModule({
-  declarations: [AppComponent, NutritionComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+
     HomeModule,
+    NutritionModule,
     AboutUsModule,
+
+    SidenavComponent,
     HeaderComponent,
     FooterComponent,
   ],
