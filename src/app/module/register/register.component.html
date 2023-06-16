@@ -11,7 +11,7 @@
           <label>Nome:</label>
           <mat-form-field>
             <mat-label>Nome completo</mat-label>
-            <input matInput>
+            <input matInput />
           </mat-form-field>
         </div>
 
@@ -19,7 +19,7 @@
           <label>Celular:</label>
           <mat-form-field>
             <mat-label>(99) 99999-9999</mat-label>
-            <input matInput mask="(00) 00000-0000">
+            <input matInput mask="(00) 00000-0000" />
           </mat-form-field>
         </div>
 
@@ -36,7 +36,6 @@
             <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
           </mat-form-field>
         </div>
-
 
         <div class="main__register--card__inputs--gender">
           <mat-form-field>
@@ -66,8 +65,20 @@
         </div>
 
         <div class="main__register--card__inputs--buttons">
-          <button mat-raised-button class="register-button">Cadastre-se</button>
-          <button mat-raised-button class=" login-button">Login</button>
+          <button
+            mat-raised-button
+            class="register-button"
+            (click)="register(email.value!, password.value!)"
+          >
+            Cadastre-se
+          </button>
+          <button
+            mat-raised-button
+            class="login-button"
+            (click)="navigateToLogin()"
+          >
+            Login
+          </button>
         </div>
       </div>
     </div>

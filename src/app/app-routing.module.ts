@@ -22,6 +22,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./module/register/register.module').then((m) => m.RegisterModule),
   },
+  {
+    path: 'nutrition',
+    loadChildren: () =>
+      import('./module/nutrition/nutrition.module').then(
+        (m) => m.NutritionModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

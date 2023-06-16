@@ -8,8 +8,9 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { HomeModule } from './module/home/home.module';
 import { AboutUsModule } from './module/about-us/about-us.module';
+import { NutritionComponent } from './module/nutrition/nutrition.component';
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NutritionComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
