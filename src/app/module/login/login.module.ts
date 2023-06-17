@@ -6,8 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from 'src/app/core/components/footer/footer.component';
-import { HeaderComponent } from 'src/app/core/components/header/header.component';
+import { CoreModule } from 'src/app/core/core.module';
 import { LoginComponent } from './login.component';
 
 const routes: Routes = [{ path: '', component: LoginComponent }];
@@ -20,9 +19,8 @@ const routes: Routes = [{ path: '', component: LoginComponent }];
     ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
+    CoreModule,
 
-    HeaderComponent,
-    FooterComponent,
     RouterModule.forChild(routes),
   ],
   declarations: [LoginComponent],

@@ -1,11 +1,10 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
-import { FooterComponent } from 'src/app/core/components/footer/footer.component';
-import { HeaderComponent } from 'src/app/core/components/header/header.component';
+import { CoreModule } from 'src/app/core/core.module';
 import { HttpClientService } from 'src/app/services/http-client.service';
 import { HomeComponent } from './home.component';
-import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -13,9 +12,8 @@ const routes: Routes = [{ path: '', component: HomeComponent }];
   declarations: [HomeComponent],
   imports: [
     HttpClientModule,
+    CoreModule,
     ButtonModule,
-    HeaderComponent,
-    FooterComponent,
     RouterModule.forChild(routes),
   ],
   exports: [HomeComponent, RouterModule],

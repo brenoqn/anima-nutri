@@ -7,10 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from 'src/app/core/components/footer/footer.component';
-import { HeaderComponent } from 'src/app/core/components/header/header.component';
-import { RegisterComponent } from './register.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { CoreModule } from 'src/app/core/core.module';
+import { RegisterComponent } from './register.component';
 
 const routes: Routes = [{ path: '', component: RegisterComponent }];
 @NgModule({
@@ -25,9 +24,7 @@ const routes: Routes = [{ path: '', component: RegisterComponent }];
     MatSelectModule,
     NgxMaskDirective,
     NgxMaskPipe,
-
-    HeaderComponent,
-    FooterComponent,
+    CoreModule,
     RouterModule.forChild(routes),
   ],
   declarations: [RegisterComponent],

@@ -1,21 +1,38 @@
 <div class="main">
   <div class="main__icon">
-    <a href="/home"><img src="../../../../assets/image/logoAnima.png" width="100px" alt="" /></a>
+    <a href="/home"
+      ><img src="../../../../assets/image/logoAnima.png" width="100px" alt=""
+    /></a>
   </div>
   <div class="main__nav">
-    <p-button
-      label="Sobre nós"
-      styleClass="p-button p-button-text"
-      (onClick)="goToAboutUs()"
-    ></p-button>
-    <p-button
-      label="Login"
-      styleClass="p-button p-button-text"
-      (onClick)="goToLogin()"
-    ></p-button>
-    <p-button
-      label="Cadastre-se"
-      styleClass="p-button-raised register"
-    ></p-button>
+    <ng-container *ngIf="isNutritionPage()">
+      <p-button
+        label="Novo Texto"
+        styleClass="p-button p-button-text"
+        (onClick)="goToNewPage()"
+      ></p-button>
+      <p-button
+        label="Outro Texto"
+        styleClass="p-button p-button-text"
+        (onClick)="goToAnotherPage()"
+      ></p-button>
+    </ng-container>
+    <ng-container *ngIf="!isNutritionPage()">
+      <p-button
+        label="Sobre nós"
+        styleClass="p-button p-button-text"
+        (onClick)="goToAboutUs()"
+      ></p-button>
+      <p-button
+        label="Login"
+        styleClass="p-button p-button-text"
+        (onClick)="goToLogin()"
+      ></p-button>
+      <p-button
+        label="Cadastre-se"
+        styleClass="p-button-raised register"
+        (onClick)="navigateToRegister()"
+      ></p-button>
+    </ng-container>
   </div>
 </div>
