@@ -1,1 +1,28 @@
-<p>sidenav works!</p>
+<div class="main">
+  <div class="main__icon">
+    <a href="/home"><img src="../../../../assets/image/logoAnima.png" width="100px" alt="" /></a>
+  </div>
+  <div class="main__nav">
+    <p-button
+      label="Pacientes"
+      styleClass="p-button p-button-text"
+      (onClick)="goToPatients()"
+    ></p-button>
+    <p-button
+      label="Alimentos"
+      styleClass="p-button p-button-text"
+      (onClick)="goToFood()"
+    ></p-button>
+    <p-button
+      label="Perfil"
+      styleClass="p-button-raised"
+      (onClick)="goToProfile()"
+    ></p-button>
+    <p-button
+      label="Sair"
+      styleClass="p-button-danger"
+      (onClick)="goToHome()"
+    ></p-button>
+  </div>
+</div>
+

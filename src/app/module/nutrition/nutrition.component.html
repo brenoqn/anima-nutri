@@ -1,7 +1,34 @@
 <div class="main">
-  <app-header></app-header>
   <app-sidenav></app-sidenav>
-  <div class="main__login">
-
+  <div class="main__welcome">
+    <app-sidebar></app-sidebar>
+    <div class="main__welcome--nav">
+      <div class="main__welcome--nav__card">
+        <div class="main__welcome--nav__card--title">
+          <h1>Bem-vindo</h1>
+        </div>
+        <div class="main__welcome--nav__card--inputs">
+          <div class="main__welcome--nav__card--inputs__patients">
+            <label htmlFor="patients">Pacientes</label>
+            <input pInputText id="patients" aria-describedby="patients" />
+            <p-button label="Pesquisar" styleClass="p-button-raised"></p-button>
+          </div>
+          <div class="main__welcome--nav__card--inputs__foods">
+            <label htmlFor="foods">Alimentos</label>
+            <input pInputText id="foods" aria-describedby="foods" />
+            <p-button label="Pesquisar" styleClass="p-button-raised"></p-button>
+          </div>
+        </div>
+        <div class="main__welcome--nav__card--image">
+          <a>
+            <img
+              src="../../../../assets/image/logoAnima.png"
+              width="400px"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

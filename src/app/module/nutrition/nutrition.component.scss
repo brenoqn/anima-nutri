@@ -1,0 +1,74 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to left,
+    #4769af,
+    #6377c2,
+    #8a81d4,
+    #c089e7,
+    #a064ae
+  );
+  background-size: 500% 100%;
+
+  &__welcome {
+    display: flex;
+    height: 100%;
+
+    &--nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__card {
+        width: 75%;
+        height: 80%;
+        gap: 3rem;
+        padding: 5rem 8rem;
+        background: #66347f;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          display: flex;
+          justify-content: center;
+          font-size: 36px;
+          color: #fff;
+          font-weight: 600;
+        }
+
+        label {
+          color: #fff;
+        }
+
+        p {
+          font-size: 18px;
+          color: white;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        &--inputs {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: space-evenly;
+
+          &__patients,
+          &__foods {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 35px;
+            gap: 35px;
+          }
+        }
+      }
+    }
+  }
+}

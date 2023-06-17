@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./nutrition.component.scss']
 })
 export class NutritionComponent {
-
+  patients: string | undefined;
+  foods: string | undefined;
 }

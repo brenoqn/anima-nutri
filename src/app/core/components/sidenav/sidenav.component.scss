@@ -1,0 +1,22 @@
+::ng-deep {
+  .p-button {
+    color: white !important;
+  }
+}
+
+.main {
+  display: flex;
+  height: 80px;
+  background: #66347f;
+  padding: 1rem 3rem;
+  justify-content: space-between;
+
+  &__icon {
+    display: flex;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 10px;
+  }
+}
