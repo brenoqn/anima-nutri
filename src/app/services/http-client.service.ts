@@ -12,4 +12,8 @@ export class HttpClientService {
   getAllEvents() {
     return this.http.get<any>(environment.BaseURL);
   }
+
+  getAllPacientes(){
+    return this.http.get<any>(environment.BaseURL + '/paciente')
+  }
 }

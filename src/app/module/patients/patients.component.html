@@ -1,0 +1,44 @@
+<div class="main">
+  <app-sidenav></app-sidenav>
+  <div class="main__patients">
+    <app-sidebar></app-sidebar>
+    <div class="main__patients--nav">
+      <div class="main__patients--nav__title">
+        <h1>PACIENTES</h1>
+      </div>
+      <div class="main__patients--nav__buttons">
+        <div class="main__patients--nav__buttons__patients">
+          <input pInputText id="patients" aria-describedby="patients" placeholder="Pesquisar"/>
+        </div>
+        <div class="main__patients--nav__buttons__register">
+          <p-button label="Cadastrar Paciente" styleClass="p-button-raised"></p-button>
+        </div>
+      </div>
+      <div class="main__patients--nav__titleCard">
+        <div class="main__patients--nav__titleCard--name">
+          <p>NOME DO PACIENTE:</p>
+        </div>
+        <div class="main__patients--nav__titleCard--email">
+          <p>EMAIL:</p>
+        </div>
+        <div class="main__patients--nav__titleCard--cell">
+          <p>CELULAR:</p>
+        </div>
+      </div>
+      <div
+        class="main__patients--nav__card"
+        *ngFor="let patient of patients"
+      >
+        <div class="main__patients--nav__card--name">
+          <p>{{ patient.name }}</p>
+        </div>
+        <div class="main__patients--nav__card--email">
+          <p>{{ patient.email }}</p>
+        </div>
+        <div class="main__patients--nav__card--cell">
+          <p>{{ patient.cell }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

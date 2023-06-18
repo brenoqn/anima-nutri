@@ -12,11 +12,11 @@ export class SidenavComponent {
   ngOnInit() {}
 
   goToPatients() {
-    this.router.navigate(['about-us']);
+    this.router.navigate(['patients']);
   }
 
   goToFood() {
-    this.router.navigate(['login']);
+    this.router.navigate(['foods']);
   }
 
   goToProfile(): void {

@@ -1,0 +1,77 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to left,
+    #4769af,
+    #6377c2,
+    #8a81d4,
+    #c089e7,
+    #a064ae
+  );
+  background-size: 500% 100%;
+
+  &__foods {
+    display: flex;
+    height: 100%;
+
+    &--nav {
+      width: 100%;
+      padding: 5% 0;
+      gap: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__buttons {
+        display: flex;
+        width: 70%;
+        justify-content: space-around;
+      }
+
+      &__titleCard {
+        width: 70%;
+        padding: 0 6%;
+        display: flex;
+        align-items: center;
+
+        &--name {
+          display: flex;
+          width: 43%;
+        }
+
+        &--amount {
+          display: flex;
+          width: 42%;
+        }
+      }
+
+      &__card {
+        width: 70%;
+        height: 10%;
+        gap: 3rem;
+        border-radius: 2rem;
+        background: #66347f;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+  }
+}

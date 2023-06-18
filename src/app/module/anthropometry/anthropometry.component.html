@@ -1,0 +1,33 @@
+<div class="main">
+  <app-sidenav></app-sidenav>
+  <div class="main__anthropometry">
+    <app-sidebar></app-sidebar>
+    <div class="main__anthropometry--nav">
+      <div class="main__anthropometry--nav__title">
+        <h1>ANTROPOMETRIA</h1>
+      </div>
+      <div class="main__anthropometry--nav__titleCard">
+        <div class="main__anthropometry--nav__titleCard--name">
+          <p>DATA:</p>
+        </div>
+        <div class="main__anthropometry--nav__titleCard--email">
+          <p>PESO:</p>
+        </div>
+        <div class="main__anthropometry--nav__titleCard--cell">
+          <p>MASSA GORDA:</p>
+        </div>
+      </div>
+      <div class="main__anthropometry--nav__card" *ngFor="let data of datas">
+        <div class="main__anthropometry--nav__card--name">
+          <p>{{ data.name }}</p>
+        </div>
+        <div class="main__anthropometry--nav__card--email">
+          <p>{{ data.email }}</p>
+        </div>
+        <div class="main__anthropometry--nav__card--cell">
+          <p>{{ data.cell }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

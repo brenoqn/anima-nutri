@@ -36,6 +36,27 @@ const routes: Routes = [
         (m) => m.AnamnesisModule
       ),
   },
+  {
+    path: 'anthropometry',
+    loadChildren: () =>
+      import('./module/anthropometry/anthropometry.module').then(
+        (m) => m.AnthropometryModule
+      ),
+  },
+  {
+    path: 'patients',
+    loadChildren: () =>
+      import('./module/patients/patients.module').then(
+        (m) => m.PatientsModule
+      ),
+  },
+  {
+    path: 'foods',
+    loadChildren: () =>
+      import('./module/foods/foods.module').then(
+        (m) => m.FoodsModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

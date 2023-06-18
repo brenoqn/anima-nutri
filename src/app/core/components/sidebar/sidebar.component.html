@@ -10,17 +10,22 @@
       styleClass="p-button p-button-text"
       (onClick)="goToAnamnesis()"
     ></p-button>
-    <!-- <p-button
-      label="Recordatório Alimentar"
-      styleClass="p-button p-button-text"
-    ></p-button> -->
     <p-button
       label="Antropometria"
       styleClass="p-button p-button-text"
+      (onClick)="goToAnthropometry()"
     ></p-button>
     <p-button
       label="Plano Alimentar"
       styleClass="p-button p-button-text"
     ></p-button>
+  </div>
+
+  <div class="main__back">
+    <p-button
+    label="Voltar"
+    styleClass="p-button-warning"
+    (onClick)="goToNutrition()"
+  ></p-button>
   </div>
 </div>

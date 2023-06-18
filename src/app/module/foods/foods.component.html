@@ -1,0 +1,44 @@
+<div class="main">
+  <app-sidenav></app-sidenav>
+  <div class="main__foods">
+    <app-sidebar></app-sidebar>
+    <div class="main__foods--nav">
+      <div class="main__foods--nav__title">
+        <h1>ALIMENTOS</h1>
+      </div>
+      <div class="main__foods--nav__buttons">
+        <div class="main__foods--nav__buttons__foods">
+          <input pInputText id="foods" aria-describedby="foods" placeholder="Pesquisar"/>
+        </div>
+        <div class="main__foods--nav__buttons__register">
+          <p-button label="Cadastrar Alimento" styleClass="p-button-raised"></p-button>
+        </div>
+      </div>
+      <div class="main__foods--nav__titleCard">
+        <div class="main__foods--nav__titleCard--name">
+          <p>NOME DO ALIMENTO:</p>
+        </div>
+        <div class="main__foods--nav__titleCard--amount">
+          <p>QUANTIDADE USUAL:</p>
+        </div>
+        <div class="main__foods--nav__titleCard--cell">
+          <p>PESO:</p>
+        </div>
+      </div>
+      <div
+        class="main__foods--nav__card"
+        *ngFor="let food of foods"
+      >
+        <div class="main__foods--nav__card--name">
+          <p>{{ food.name }}</p>
+        </div>
+        <div class="main__foods--nav__card--amount">
+          <p>{{ food.amount }}</p>
+        </div>
+        <div class="main__foods--nav__card--cell">
+          <p>{{ food.cell }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
