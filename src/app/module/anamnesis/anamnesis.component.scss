@@ -1,0 +1,55 @@
+:host ::ng-deep {
+  .p-inputtext {
+    height: 518px;
+    width: 1504px;
+  }
+
+  p-button,
+  .p-button-raised {
+    width: 100% !important;
+  }
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to left,
+    #4769af,
+    #6377c2,
+    #8a81d4,
+    #c089e7,
+    #a064ae
+  );
+  background-size: 500% 100%;
+
+  &__anamnesis {
+    display: flex;
+    height: 100%;
+
+    &--nav {
+      width: 100%;
+      padding: 5% 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &__title {
+        color: #fff;
+
+        h1 {
+          font-size: 32px;
+          font-weight: 600;
+        }
+      }
+
+      &__button {
+        display: flex;
+        width: 100%;
+        padding: 1rem 3rem;
+      }
+    }
+  }
+}

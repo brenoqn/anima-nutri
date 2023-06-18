@@ -29,6 +29,13 @@ const routes: Routes = [
         (m) => m.NutritionModule
       ),
   },
+  {
+    path: 'anamnesis',
+    loadChildren: () =>
+      import('./module/anamnesis/anamnesis.module').then(
+        (m) => m.AnamnesisModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

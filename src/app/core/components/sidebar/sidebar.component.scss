@@ -36,8 +36,9 @@
 
   &__nav {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 }
