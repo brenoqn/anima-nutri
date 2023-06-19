@@ -15,6 +15,8 @@ import { RegisterModule } from './module/register/register.module';
 import { PatientsModule } from './module/patients/patients.module';
 import { FoodsModule } from './module/foods/foods.module';
 import { ProfileModule } from './module/profile/profile.module';
+import { RegisterPatientsModule } from './module/register-patients/register-patients.module';
+import { RegisterFoodModule } from './module/register-food/register-food.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -32,7 +34,9 @@ import { ProfileModule } from './module/profile/profile.module';
     AnamnesisModule,
     PatientsModule,
     FoodsModule,
-    ProfileModule
+    ProfileModule,
+    RegisterPatientsModule,
+    RegisterFoodModule
   ],
   providers: [],
   bootstrap: [AppComponent, PrimeIcons],

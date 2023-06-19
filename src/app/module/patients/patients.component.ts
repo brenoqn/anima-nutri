@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClientService } from 'src/app/services/http-client.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { HttpClientService } from 'src/app/services/http-client.service';
 export class PatientsComponent {
   patients: any[] = [];
 
-  constructor(private apiService: HttpClientService) {}
+  constructor(private apiService: HttpClientService, private router: Router) {}
 
   ngOnInit() {
     this.apiService.getAllPacientes().subscribe(
@@ -19,5 +20,9 @@ export class PatientsComponent {
       },
       (err) => console.error(err)
     );
+  }
+
+  goToRegisterPatient(){
+    this.router.navigateByUrl('/register-patient');
   }
 }

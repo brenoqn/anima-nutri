@@ -7,10 +7,17 @@
       </div>
       <div class="main__patients--nav__buttons">
         <div class="main__patients--nav__buttons__patients">
-          <input pInputText id="patients" aria-describedby="patients" placeholder="Pesquisar"/>
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText />
+          </span>
         </div>
         <div class="main__patients--nav__buttons__register">
-          <p-button label="Cadastrar Paciente" styleClass="p-button-raised"></p-button>
+          <p-button
+            label="Cadastrar Paciente"
+            styleClass="p-button-raised"
+            (onClick)="goToRegisterPatient()"
+          ></p-button>
         </div>
       </div>
       <div class="main__patients--nav__titleCard">
@@ -24,7 +31,18 @@
           <p>CELULAR:</p>
         </div>
       </div>
-      <div
+      <div class="main__patients--nav__card">
+        <div class="main__patients--nav__card--name">
+          <p>Breno Queiroz</p>
+        </div>
+        <div class="main__patients--nav__card--email">
+          <p>brenoqn01@gmail.com</p>
+        </div>
+        <div class="main__patients--nav__card--cell">
+          <p>(34) 99894-0198</p>
+        </div>
+      </div>
+      <!-- <div
         class="main__patients--nav__card"
         *ngFor="let patient of patients"
       >
@@ -37,7 +55,7 @@
         <div class="main__patients--nav__card--cell">
           <p>{{ patient.cell }}</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

@@ -64,6 +64,20 @@ const routes: Routes = [
         (m) => m.ProfileModule
       ),
   },
+  {
+    path: 'register-patient',
+    loadChildren: () =>
+      import('./module/register-patients/register-patients.module').then(
+        (m) => m.RegisterPatientsModule
+      ),
+  },
+  {
+    path: 'register-food',
+    loadChildren: () =>
+      import('./module//register-food/register-food.module').then(
+        (m) => m.RegisterFoodModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
