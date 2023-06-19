@@ -79,7 +79,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'food-plan',
+    path: 'food-plan/:patientId',
     loadChildren: () =>
       import('./module/food-plan/food-plan.module').then(
         (m) => m.FoodPlanModule

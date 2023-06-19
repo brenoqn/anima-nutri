@@ -4,13 +4,21 @@
     <app-sidebar></app-sidebar>
     <div class="main__anamnesis--nav">
       <div class="main__anamnesis--nav__title">
-        <h1>Plano Alimentar - 'Nome do Paciente':</h1>
+        <h1>Plano Alimentar - {{ pacient?.nome }}:</h1>
       </div>
       <div class="main__anamnesis--nav__input">
-        <textarea rows="5" cols="30" pInputTextarea></textarea>
+        <textarea
+          rows="5"
+          cols="30"
+          pInputTextarea
+        ></textarea>
       </div>
       <div class="main__anamnesis--nav__button">
-        <p-button label="Salvar" styleClass="p-button-raised"></p-button>
+        <p-button
+          label="Salvar"
+          styleClass="p-button-raised"
+          (click)="saveChanges()"
+        ></p-button>
       </div>
     </div>
   </div>

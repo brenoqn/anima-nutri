@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
@@ -13,6 +14,7 @@ const routes: Routes = [{ path: '', component: FoodPlanComponent }];
   imports: [
     CommonModule,
     CoreModule,
+    FormsModule,
     InputTextareaModule,
     ButtonModule,
     RouterModule.forChild(routes),

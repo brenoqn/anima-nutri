@@ -27,7 +27,7 @@ export class PatientsComponent {
     this.router.navigateByUrl('/register-patient');
   }
 
-  goToPatient() {
-    this.router.navigateByUrl('/food-plan');
+  goToPatient(patientId: string) {
+    this.router.navigateByUrl(`/food-plan/${patientId}`);
   }
 }
