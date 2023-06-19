@@ -20,7 +20,7 @@ export class SidenavComponent {
   }
 
   goToProfile(): void {
-    this.router.navigateByUrl('/home');
+    this.router.navigateByUrl('/profile');
   }
 
   goToHome(): void {

@@ -57,6 +57,13 @@ const routes: Routes = [
         (m) => m.FoodsModule
       ),
   },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./module/profile/profile.module').then(
+        (m) => m.ProfileModule
+      ),
+  },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
