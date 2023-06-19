@@ -5,13 +5,12 @@
       <div class="main__register--card__title">
         <h1>Novo Alimento</h1>
       </div>
-
-      <div class="main__register--card__inputs">
+      <div class="main__register--card__inputs" [formGroup]="form">
         <div class="main__register--card__inputs--name">
           <label>Nome:</label>
           <mat-form-field>
             <mat-label>Nome do alimento</mat-label>
-            <input matInput />
+            <input matInput formControlName="nome" />
           </mat-form-field>
         </div>
 
@@ -19,7 +18,7 @@
           <label>Porção:</label>
           <mat-form-field>
             <mat-label>Porção</mat-label>
-            <input matInput />
+            <input matInput formControlName="porcao" />
           </mat-form-field>
         </div>
 
@@ -27,7 +26,7 @@
           <label>Calorias:</label>
           <mat-form-field>
             <mat-label>Calorias</mat-label>
-            <input matInput />
+            <input matInput formControlName="calorias" />
           </mat-form-field>
         </div>
 
@@ -35,10 +34,7 @@
           <label>Medidas Caseiras:</label>
           <mat-form-field>
             <mat-label>Medidas Caseiras:</mat-label>
-            <mat-select>
-              <mat-option value="masc">Masculino</mat-option>
-              <mat-option value="fem">Feminino</mat-option>
-            </mat-select>
+            <input matInput formControlName="medidaCaseira" />
           </mat-form-field>
         </div>
 
@@ -46,10 +42,7 @@
           <label>Unidades:</label>
           <mat-form-field>
             <mat-label>Unidades:</mat-label>
-            <mat-select>
-              <mat-option value="masc">Masculino</mat-option>
-              <mat-option value="fem">Feminino</mat-option>
-            </mat-select>
+            <input matInput formControlName="unidade" />
           </mat-form-field>
         </div>
 
@@ -57,7 +50,7 @@
           <button
             mat-raised-button
             class="register-button"
-            (click)="goToFoods()"
+            (click)="goToRegisterFoods()"
           >
             Cadastrar
           </button>

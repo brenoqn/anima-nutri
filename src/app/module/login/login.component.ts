@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   private mockDatabase: { email: string; password: string }[] = [
     { email: 'brenoqn01@gmail.com', password: 'Teste@123' },
     { email: 'hugo161299@gmail.com', password: 'Teste@123' },
+    { email: 'rogeriofontes@rogeriofontes.inf.br', password: 'Teste@123' },
   ];
 
   constructor(private router: Router) {}

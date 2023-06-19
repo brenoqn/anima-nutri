@@ -12,7 +12,16 @@ export class FoodsComponent {
 
   constructor(private apiService: HttpClientService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.apiService.getAllFoods().subscribe({
+      next: (res) => {
+        this.foods = res;
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
 
   goToRegisterFood() {
     this.router.navigateByUrl('/register-food');

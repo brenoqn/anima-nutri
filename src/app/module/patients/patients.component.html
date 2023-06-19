@@ -31,34 +31,24 @@
           <p>CELULAR:</p>
         </div>
       </div>
-      <div class="main__patients--nav__card">
+      <div class="main__patients--nav__card" *ngFor="let patient of patients">
         <div class="main__patients--nav__card--name">
-          <p>Breno Queiroz</p>
-        </div>
-        <div class="main__patients--nav__card--email">
-          <p>brenoqn01@gmail.com</p>
-        </div>
-        <div class="main__patients--nav__card--cell">
-          <p>(34) 99894-0198</p>
-        </div>
-        <div class="main__patients--nav__card--view">
-          <i class="pi pi-folder-open" (click)="goToPatient()" style="cursor: pointer;"></i>
-        </div>
-      </div>
-      <!-- <div
-        class="main__patients--nav__card"
-        *ngFor="let patient of patients"
-      >
-        <div class="main__patients--nav__card--name">
-          <p>{{ patient.name }}</p>
+          <p>{{ patient.nome }}</p>
         </div>
         <div class="main__patients--nav__card--email">
           <p>{{ patient.email }}</p>
         </div>
         <div class="main__patients--nav__card--cell">
-          <p>{{ patient.cell }}</p>
+          <p>{{ patient.telefone }}</p>
         </div>
-      </div> -->
+        <div class="main__patients--nav__card--view">
+          <i
+            class="pi pi-folder-open"
+            (click)="goToPatient()"
+            style="cursor: pointer"
+          ></i>
+        </div>
+      </div>
     </div>
   </div>
 </div>

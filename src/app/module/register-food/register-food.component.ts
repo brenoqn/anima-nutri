@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
+import { HttpClientService } from 'src/app/services/http-client.service';
 
 @Component({
   selector: 'app-register-food',
@@ -8,17 +14,36 @@ import { Router } from '@angular/router';
   styleUrls: ['./register-food.component.scss'],
 })
 export class RegisterFoodComponent {
-  email = new FormControl('', [Validators.required, Validators.email]);
+  form!: FormGroup;
   hide: boolean = true;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private formBuilder: FormBuilder,
+    private apiService: HttpClientService
+  ) {}
 
-  getErrorMessage() {
-    if (this.email.hasError('Obrigatório')) {
-      return 'Você deve inserir um valor';
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      nome: ['', Validators.required],
+      porcao: ['', Validators.required],
+      calorias: ['', Validators.required],
+      medidaCaseira: ['', Validators.required],
+      unidade: ['', Validators.required],
+    });
+  }
+
+  goToRegisterFoods(): void {
+    if (this.form.valid) {
+      this.apiService.postNewFood(this.form.value).subscribe({
+        next: (res) => {
+          this.router.navigateByUrl('/foods');
+        },
+        error: (err) => {
+          console.error(err);
+        },
+      });
     }
-
-    return this.email.hasError('email') ? 'E-mail inválido' : '';
   }
 
   goToFoods(): void {
