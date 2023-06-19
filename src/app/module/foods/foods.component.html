@@ -7,10 +7,17 @@
       </div>
       <div class="main__foods--nav__buttons">
         <div class="main__foods--nav__buttons__foods">
-          <input pInputText id="foods" aria-describedby="foods" placeholder="Pesquisar"/>
+          <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText />
+          </span>
         </div>
         <div class="main__foods--nav__buttons__register">
-          <p-button label="Cadastrar Alimento" styleClass="p-button-raised" (onClick)="goToRegisterFood()"></p-button>
+          <p-button
+            label="Cadastrar Alimento"
+            styleClass="p-button-raised"
+            (onClick)="goToRegisterFood()"
+          ></p-button>
         </div>
       </div>
       <div class="main__foods--nav__titleCard">
@@ -24,10 +31,7 @@
           <p>PESO:</p>
         </div>
       </div>
-      <div
-        class="main__foods--nav__card"
-        *ngFor="let food of foods"
-      >
+      <div class="main__foods--nav__card" *ngFor="let food of foods">
         <div class="main__foods--nav__card--name">
           <p>{{ food.name }}</p>
         </div>

@@ -25,4 +25,8 @@ export class PatientsComponent {
   goToRegisterPatient(){
     this.router.navigateByUrl('/register-patient');
   }
+
+  goToPatient(){
+    this.router.navigateByUrl('/food-plan')
+  }
 }

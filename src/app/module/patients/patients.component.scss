@@ -65,7 +65,7 @@ p {
       &__card {
         width: 70%;
         height: 10%;
-        padding: 0 6%;
+        padding: 0 2% 0 6%;
         border-radius: 2rem;
         background: #66347f;
         display: flex;
@@ -84,7 +84,11 @@ p {
 
         &--cell {
           display: flex;
-          width: 17.5%;
+          width: 23%;
+        }
+
+        &--view {
+          color: white;
         }
       }
     }

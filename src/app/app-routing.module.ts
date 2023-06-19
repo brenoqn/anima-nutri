@@ -74,8 +74,15 @@ const routes: Routes = [
   {
     path: 'register-food',
     loadChildren: () =>
-      import('./module//register-food/register-food.module').then(
+      import('./module/register-food/register-food.module').then(
         (m) => m.RegisterFoodModule
+      ),
+  },
+  {
+    path: 'food-plan',
+    loadChildren: () =>
+      import('./module/food-plan/food-plan.module').then(
+        (m) => m.FoodPlanModule
       ),
   },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
